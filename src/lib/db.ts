@@ -26,9 +26,9 @@ export default async function excuteQuery({
     console.log(`Execute Query ` + process.env.MYSQL_DATABASE);
     const results = <string[]>await db.query(query, values);
     console.log(`
-    -----------
+    ------------****************
       result= ${results[0][0]}
-    ------------`);
+    ------------****************`);
     await db.end();
     return results;
   } catch (error) {
